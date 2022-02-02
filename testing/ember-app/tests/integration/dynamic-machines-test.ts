@@ -11,7 +11,7 @@ module('v2 addon tests', function (hooks) {
   setupRenderingTest(hooks);
 
   test('utils work', function (assert) {
-    assert.ok(getService('router'));
+    assert.ok(getService(this, 'router'));
   });
 
   test('<Demo />', async function (assert) {

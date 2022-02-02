@@ -14,6 +14,17 @@ module('v2 addon tests', function (hooks) {
     assert.ok(getService(this, 'router'));
   });
 
+  test('{{stringify obj}}', async function (assert) {
+    this.setProperties({
+      testObj: { a: 'hi', b: 'hello' },
+    })
+
+    await render(hbs`<pre>{{stringify this.testObj}}</pre>`);
+
+    assert.dom('pre').containsText('hi');
+    assert.dom('pre').containsText('hello');
+  });
+
   test('<Demo />', async function (assert) {
     await render(hbs`<Demo />`);
 

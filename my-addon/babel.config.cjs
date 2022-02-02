@@ -1,10 +1,10 @@
-import { createRequire } from 'module';
-import { precompile } from '@glimmer/compiler';
+'use strict';
 
-const require = createRequire(import.meta.url);
-const resolve = require.resolve;
+const { precompile } = require('@glimmer/compiler');
 
-export default {
+const { resolve } = require;
+
+module.exports = {
   plugins: [
     [
       resolve('@babel/plugin-transform-typescript'),
@@ -13,6 +13,13 @@ export default {
         onlyRemoveTypeImports: true,
         // Default enums are IIFEs
         optimizeConstEnums: true,
+      },
+    ],
+    [
+      resolve('@babel/plugin-proposal-decorators'),
+      {
+        // The stage 1 implementation
+        legacy: true,
       },
     ],
     [

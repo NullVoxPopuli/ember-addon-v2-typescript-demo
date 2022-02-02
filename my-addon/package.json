@@ -92,6 +92,8 @@
     "type": "addon",
     "main": "./config/addon-main.cjs",
     "app-js": {
+      "./helpers/stringify.js": "./dist/_app_/helpers/stringify.js",
+      "./helpers/stringify2.js": "./dist/_app_/helpers/stringify2.js",
       "./components/flat-demo.js": "./dist/_app_/components/flat-demo.js",
       "./instance-initializers/example-instance-initializer.js": "./dist/_app_/instance-initializers/example-instance-initializer.js",
       "./components/demo/index.js": "./dist/_app_/components/demo/index.js"

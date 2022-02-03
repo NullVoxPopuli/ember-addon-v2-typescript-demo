@@ -50,9 +50,6 @@
     "@embroider/addon-dev": "1.0.0",
     "@glimmer/compiler": "^0.83.1",
     "@nullvoxpopuli/eslint-configs": "^2.1.10",
-    "@rollup/plugin-alias": "3.1.9",
-    "@rollup/plugin-babel": "5.3.0",
-    "@rollup/plugin-node-resolve": "^13.0.6",
     "@types/ember__application": "^3.16.3",
     "@types/ember__component": "^3.16.6",
     "@types/ember__debug": "^3.16.5",
@@ -73,7 +70,6 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-simple-import-sort": "^7.0.0",
     "rollup": "2.67.0",
-    "rollup-plugin-multi-input": "1.3.1",
     "rollup-plugin-ts": "2.0.5",
     "semantic-release": "^19.0.0",
     "typescript": "^4.4.2"
@@ -87,16 +83,20 @@
   "ember": {
     "edition": "octane"
   },
+  "peerDependencies": {
+    "ember-source": "*",
+    "@glimmer/component": "*",
+    "@glimmer/tracking": "*"
+  },
   "ember-addon": {
     "version": 2,
     "type": "addon",
     "main": "./config/addon-main.cjs",
     "app-js": {
-      "./helpers/stringify.js": "./dist/_app_/helpers/stringify.js",
-      "./helpers/stringify2.js": "./dist/_app_/helpers/stringify2.js",
+      "./components/demo/index.js": "./dist/_app_/components/demo/index.js",
       "./components/flat-demo.js": "./dist/_app_/components/flat-demo.js",
-      "./instance-initializers/example-instance-initializer.js": "./dist/_app_/instance-initializers/example-instance-initializer.js",
-      "./components/demo/index.js": "./dist/_app_/components/demo/index.js"
+      "./helpers/stringify.js": "./dist/_app_/helpers/stringify.js",
+      "./instance-initializers/example-instance-initializer.js": "./dist/_app_/instance-initializers/example-instance-initializer.js"
     }
   },
   "volta": {

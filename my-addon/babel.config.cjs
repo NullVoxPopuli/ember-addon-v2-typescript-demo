@@ -30,13 +30,13 @@ module.exports = {
         loose: true,
       },
     ],
-    [
-      resolve('babel-plugin-ember-template-compilation'),
-      {
-        precompile,
-        enableLegacyModules: ['ember-cli-htmlbars'],
-      },
-    ],
+    // [
+    //   resolve('babel-plugin-ember-template-compilation'),
+    //   {
+    //     precompile,
+    //     enableLegacyModules: ['ember-cli-htmlbars'],
+    //   },
+    // ],
     resolve('@embroider/addon-dev/template-colocation-plugin'),
   ],
 };

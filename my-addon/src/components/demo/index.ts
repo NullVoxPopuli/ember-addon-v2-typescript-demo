@@ -1,10 +1,10 @@
 import Component from '@glimmer/component';
 import { tracked } from '@glimmer/tracking';
 
-// import FlipButton from './button';
+import FlipButton from './button';
 
 export default class Demo extends Component {
-  // Button = FlipButton;
+  Button = FlipButton;
 
   @tracked active = false;
 

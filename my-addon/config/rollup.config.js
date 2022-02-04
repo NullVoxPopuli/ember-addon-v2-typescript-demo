@@ -25,7 +25,7 @@ export default defineConfig({
   plugins: [
    // Instruct rollup how to resolve ts and hbs imports
     // (importing a template-only component, for example)
-    // nodeResolve({ extensions: [ '.gjs', '.gts', '.js', '.ts', '.hbs']}),
+    nodeResolve({ extensions: [ '.gjs', '.gts', '.js', '.ts', '.hbs']}),
 
     // These are the modules that users should be able to import from your
     // addon. Anything not listed here may get optimized away.

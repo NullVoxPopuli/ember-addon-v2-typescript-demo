@@ -14,7 +14,7 @@ const addon = new Addon({
 // Unfortunately, your local project layout has to kind of match what classic ember expects
 // so that all the app-re-exports can be properly generated
 const globallyAvailable = [
-  'components/**/*.{ts,js}',
+  'components/**/*.{ts,js,hbs}',
   'instance-initializers/*.{ts,js}',
   'helpers/**/*.{ts,js}',
 ];

@@ -92,6 +92,7 @@
     "type": "addon",
     "main": "./config/addon-main.cjs",
     "app-js": {
+      "./components/demo/button.js": "./dist/_app_/components/demo/button.js",
       "./components/demo/index.js": "./dist/_app_/components/demo/index.js",
       "./components/flat-demo.js": "./dist/_app_/components/flat-demo.js",
       "./helpers/stringify.js": "./dist/_app_/helpers/stringify.js",

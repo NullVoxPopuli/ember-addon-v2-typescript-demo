@@ -8,6 +8,9 @@ module.exports = function (defaults) {
       watchDependencies: [Object.keys(require('./package').dependencies)],
       webpack: {
         devtool: 'inline-source-map',
+        module: {
+          rules: [{ test: /\.(js|ts)$/, type: 'javascript/auto' }],
+        },
       },
     },
   });
@@ -15,20 +18,12 @@ module.exports = function (defaults) {
   const { maybeEmbroider } = require('@embroider/test-setup');
 
   return maybeEmbroider(app, {
-    packageRules: [
-      {
-        package: 'ember-app',
-        components: {
-          '{{toggle}}': { safeToIgnore: true },
-          '{{toggle-machine}}': { safeToIgnore: true },
-          '{{test-machine}}': { safeToIgnore: true },
-          '{{report}}': { safeToIgnore: true },
-        },
-      },
-    ],
     packagerOptions: {
       webpackConfig: {
         devtool: 'inline-source-map',
+        module: {
+          rules: [{ test: /\.(js|ts)$/, type: 'javascript/auto' }],
+        },
       },
     },
   });

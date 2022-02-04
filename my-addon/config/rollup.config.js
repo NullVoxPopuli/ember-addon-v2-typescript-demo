@@ -14,13 +14,13 @@ const addon = new Addon({
 // Unfortunately, your local project layout has to kind of match what classic ember expects
 // so that all the app-re-exports can be properly generated
 const globallyAvailable = [
-  'components/**/*.{ts,js,hbs}',
+  'components/**/*.{ts,js}',
   'instance-initializers/*.{ts,js}',
   'helpers/**/*.{ts,js}',
 ];
 
 export default defineConfig({
-  external: ['tslib', 'ember-cli-htmlbars'],
+  external: ['tslib', 'ember-cli-htmlbars', '@glimmer/tracking', '@glimmer/component'],
   output: addon.output(),
   plugins: [
    // Instruct rollup how to resolve ts and hbs imports

@@ -7,7 +7,6 @@
   "description": "Demo Addon",
   "repository": "https://github.com/NullVoxPopuli/ember-addon-v2-typescript-demo",
   "license": "MIT",
-  "type": "module",
   "author": "NullVoxPopuli",
   "types": "dist",
   "exports": {
